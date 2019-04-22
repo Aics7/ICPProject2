@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.google.zxing.Result;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -25,6 +26,7 @@ import static android.Manifest.permission.CAMERA;
 public class Scanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     public static ArrayList<String> barCodes =new ArrayList<String>();
+    public static Stack<String> tempBarcodes=new Stack<String>();
     public static boolean alreadyScanned=true;
 
     private static final int REQUEST_CAMERA = 1;
@@ -156,7 +158,7 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
         if(barCodes.indexOf(scanResult)<0){
             alreadyScanned=false;
-            barCodes.add(scanResult);
+            tempBarcodes.push(scanResult);
         }
         else{
             alreadyScanned=true;

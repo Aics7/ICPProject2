@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class MakePayment extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -45,6 +46,7 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
             String print="GHc 0.20 credited to account: "+selected;
             Toast.makeText(getApplicationContext(), print, Toast.LENGTH_LONG).show();
             paid=true;
+            Scanner.barCodes.add(Scanner.tempBarcodes.pop());
         }
         else{
             Toast.makeText(getApplicationContext(), "Payment cannot be made; Product has already been scanned by another user", Toast.LENGTH_LONG).show();
