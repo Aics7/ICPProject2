@@ -14,4 +14,5 @@
     <string name="balance_title">Kindly find the balances of all accounts below</string>
     <string name="accs_balances">Accounts and balances to be displayed here</string>
     <string name="get_all_accounts_balances">Get all accounts balances</string>
+    <string name="todo">TODO</string>
 </resources>
