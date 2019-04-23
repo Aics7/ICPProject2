@@ -21,14 +21,15 @@
         android:orientation="vertical">
 
         <TextView
-            android:background="#183f48"
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
+            android:background="#10AD5B"
             android:gravity="center"
             android:text="@string/balance_title"
+            android:textAllCaps="true"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/balances"
@@ -37,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:background="#183f48"
+            android:background="#0FA08F"
             android:id="@+id/balances"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

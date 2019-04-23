@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
@@ -19,6 +21,18 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btn = (Button) findViewById(R.id.btnShow);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(MainActivity.this, v);
+                popup.setOnMenuItemClickListener(MainActivity.this);
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.menu_example, popup.getMenu());
+                popup.show();
+            }
+        });
     }
 
     public void scan(View view){
@@ -34,29 +48,33 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         Intent int1=new Intent(MainActivity.this,AccountsData.class);
         startActivity(int1);
     }
-    public void showStakeholders(View v) {
-        PopupMenu popup = new PopupMenu(this, v);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.menu_example, popup.getMenu());
-        popup.show();
-    }
+
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.zoomlion:
-                Intent int1=new Intent(MainActivity.this,Zoomlion.class);
+                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent int1 = new Intent(MainActivity.this, Zoomlion.class);
                 startActivity(int1);
+                return true;
             case R.id.essentials:
-                Intent int2=new Intent(MainActivity.this,Essentials.class);
+                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent int2 = new Intent(MainActivity.this, Essentials.class);
                 startActivity(int2);
+                return true;
             case R.id.bigben:
-                Intent int3=new Intent(MainActivity.this,Bigben.class);
+                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent int3 = new Intent(MainActivity.this, Bigben.class);
                 startActivity(int3);
+                return true;
             case R.id.akorno:
-                Intent int4=new Intent(MainActivity.this,Akorno.class);
+                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent int4 = new Intent(MainActivity.this, Akorno.class);
                 startActivity(int4);
+                return true;
+            default:
+                return false;
         }
-        return true;
     }
 
 

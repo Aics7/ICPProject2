@@ -69,11 +69,10 @@
 
         <Button
             android:id="@+id/btnShow"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stakeholders"
-            android:onClick="showStakeholders"
             android:background="@drawable/mybutton"
-            />
+            android:text="@string/stakeholders"
+            android:textColor="@android:color/background_light" />
 </LinearLayout>
 </FrameLayout>
