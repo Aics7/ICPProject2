@@ -21,6 +21,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:background="#183f48"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
+
             android:id="@+id/acc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -55,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/mybutton"
             android:onClick="pay"
             android:text="@string/make_payment"
             android:textColor="@android:color/background_light"
@@ -66,8 +68,9 @@
             app:layout_constraintTop_toBottomOf="@+id/acc" />
 
         <TextView
+            android:background="#183f48"
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
@@ -86,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/mybutton"
             android:onClick="createAccount"
             android:text="@string/create_account"
             android:textColor="@android:color/background_light"

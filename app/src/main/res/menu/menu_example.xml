@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/zoomlion"
+        android:icon="@drawable/zl"
+        android:title="@string/zoomlion" />
+    <item android:id="@+id/essentials"
+        android:icon="@drawable/esse"
+        android:title="@string/essentials" />
+    <item android:id="@+id/bigben"
+        android:icon="@drawable/bigben"
+        android:title="@string/bigben" />
+    <item android:id="@+id/akorno"
+        android:icon="@drawable/akorno"
+        android:title="@string/akorno" />
+</menu>
