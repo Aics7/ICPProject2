@@ -8,7 +8,7 @@
     <string name="create_account">\t\t\t\t Sign Up \t\t\t\t</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="fill_form">Keep Ashesi clean</string>
+    <string name="fill_form">\t Keep Ashesi clean \t</string>
     <string name="type_your_password_here"> Password </string>
     <string name="type_your_email_here">Email</string>
     <string name="balance_title">Kindly find the balances of all accounts below</string>
