@@ -5,12 +5,12 @@
     <string name="acc_select">Please select an account to make payment</string>
     <string name="account_inexistent">Account Doesn\'t Exist? \n Tap create Acount to create a new Account</string>
     <string name="make_payment">\t\t\t\tMake Payment\t\t\t\t</string>
-    <string name="create_account">\t\t\t\tCreate Account\t\t\t\t</string>
+    <string name="create_account">\t\t\t\t Sign Up \t\t\t\t</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="fill_form">To create an account with us, please fill in your details in the spaces provided below</string>
-    <string name="type_your_password_here">Type your password here</string>
-    <string name="type_your_email_here">Type your email here</string>
+    <string name="fill_form">Keep Ashesi clean</string>
+    <string name="type_your_password_here"> Password </string>
+    <string name="type_your_email_here">Email</string>
     <string name="balance_title">Kindly find the balances of all accounts below</string>
     <string name="accs_balances">Accounts and balances to be displayed here</string>
     <string name="get_all_accounts_balances">\t Get all accounts balances\t</string>
@@ -20,4 +20,7 @@
     <string name="bigben">Big Ben</string>
     <string name="akorno">Akorno</string>
     <string name="stakeholders">Stakeholders</string>
+    <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
+    <string name="create_cus_acc">Create customer Account</string>
+    <string name="welcome">Welcome to\nAshesi As a Living Lab</string>
 </resources>

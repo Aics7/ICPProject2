@@ -19,13 +19,13 @@
         <activity android:name=".Essentials" />
         <activity android:name=".Zoomlion" />
         <activity android:name=".AccountsData" />
-        <activity android:name=".CreateAccount" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".MakePayment"
             android:label="@string/title_activity_make_payment"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Scanner" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CreateAccount">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

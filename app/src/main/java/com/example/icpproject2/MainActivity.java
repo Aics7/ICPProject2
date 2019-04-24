@@ -53,22 +53,22 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.zoomlion:
-                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int1 = new Intent(MainActivity.this, Zoomlion.class);
                 startActivity(int1);
                 return true;
             case R.id.essentials:
-                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int2 = new Intent(MainActivity.this, Essentials.class);
                 startActivity(int2);
                 return true;
             case R.id.bigben:
-                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int3 = new Intent(MainActivity.this, Bigben.class);
                 startActivity(int3);
                 return true;
             case R.id.akorno:
-                Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int4 = new Intent(MainActivity.this, Akorno.class);
                 startActivity(int4);
                 return true;

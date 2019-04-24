@@ -28,7 +28,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/mybutton"
             android:onClick="createAccount"
-            android:text="@string/create_account"
+            android:text="@string/create_cus_acc"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button7"
