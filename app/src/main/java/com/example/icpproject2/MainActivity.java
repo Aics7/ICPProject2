@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.zoomlion:
                 Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int4 = new Intent(MainActivity.this, Akorno.class);
                 startActivity(int4);
+
                 return true;
             default:
                 return false;
