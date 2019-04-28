@@ -1,5 +1,8 @@
 #include <jni.h>
 #include <string>
+#include <list>
+#include <vector>
+
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_icpproject2_MainActivity_stringFromJNI(

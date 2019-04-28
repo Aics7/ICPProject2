@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         Intent int1=new Intent(MainActivity.this,Scanner.class);
         startActivity(int1);
     }
+    public void getGuardian(View view){
+        Intent int1=new Intent(MainActivity.this,LeaderBoad.class);
+        startActivity(int1);
+    }
     public void createAccount(View view){
         Intent int1=new Intent(MainActivity.this,CreateAccount.class);
         startActivity(int1);
