@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/mybutton"
+            android:background="@color/colorPrimaryDark"
             android:onClick="scan"
             android:text="@string/scan"
             android:textColor="@android:color/background_light"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/mybutton"
+            android:background="@color/colorPrimaryDark"
             android:onClick="getAllAccountData"
             android:text="@string/get_all_accounts_balances"
             android:textColor="@android:color/background_light"
@@ -71,8 +71,9 @@
             android:id="@+id/btnShow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/mybutton"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/stakeholders"
             android:textColor="@android:color/background_light" />
 </LinearLayout>
+
 </FrameLayout>

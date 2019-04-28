@@ -23,4 +23,8 @@
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
     <string name="create_cus_acc">Create customer Account</string>
     <string name="welcome">Welcome to\nAshesi As a Living Lab</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="name">Name</string>
+    <string name="Price">Price</string>
 </resources>
