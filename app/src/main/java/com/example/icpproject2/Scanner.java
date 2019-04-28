@@ -143,6 +143,8 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
                 scannerView.resumeCameraPreview(Scanner.this);
             }
         });
+
+        // save item in bin instead then make payment later
         builder.setNeutralButton("Make Payment", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

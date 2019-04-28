@@ -20,6 +20,7 @@ public class CreateAccount extends AppCompatActivity {
     private EditText mail, password;
     FirebaseAuth authUser;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -21,6 +21,7 @@
     <string name="akorno">Akorno</string>
     <string name="stakeholders">Stakeholders</string>
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
-    <string name="create_cus_acc">Create customer Account</string>
+    <string name="Log_out">Log out</string>
     <string name="welcome">Welcome to\nAshesi As a Living Lab</string>
+    <string name="user_name">User name</string>
 </resources>

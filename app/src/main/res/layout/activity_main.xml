@@ -21,22 +21,6 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/mybutton"
-            android:onClick="createAccount"
-            android:text="@string/create_cus_acc"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/button7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-        <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,5 +58,22 @@
             android:background="@drawable/mybutton"
             android:text="@string/stakeholders"
             android:textColor="@android:color/background_light" />
-</LinearLayout>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/mybutton"
+            android:onClick="createAccount"
+            android:text="@string/Log_out"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    </LinearLayout>
 </FrameLayout>
