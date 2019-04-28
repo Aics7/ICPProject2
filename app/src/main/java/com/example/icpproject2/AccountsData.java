@@ -16,8 +16,8 @@ public class AccountsData extends AppCompatActivity {
         String data = "";
         int index = 0;
         DecimalFormat format = new DecimalFormat("#####0.00");
-        for (String i : MakePayment.accounts) {
-            data = data + "Account mail: " + i + "\nAccount balance: GHc " + format.format(MakePayment.balance.get(index)) + "\n\n";
+        for (String i : MakePayment.accountnames) {
+            data = data + "Account name: " + i + "\nAccount balance: GHc " + format.format(MakePayment.balance.get(index)) + "\n\n";
             index++;
         }
         TextView newTextView=(TextView) findViewById(R.id.balances);

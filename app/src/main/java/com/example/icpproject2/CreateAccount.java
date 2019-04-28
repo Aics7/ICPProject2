@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class CreateAccount extends AppCompatActivity {
 
 
-    private EditText mail, password;
+    private EditText userName,mail, password;
     FirebaseAuth authUser;
 
     RadioGroup radioGroup;
@@ -31,6 +31,7 @@ public class CreateAccount extends AppCompatActivity {
 
         password = (EditText) findViewById(R.id.password);
         mail = (EditText) findViewById(R.id.email);
+        userName = (EditText) findViewById(R.id.userName);
 
         radioGroup = findViewById(R.id.groupRadio);
         authUser = FirebaseAuth.getInstance();
@@ -39,61 +40,70 @@ public class CreateAccount extends AppCompatActivity {
     public void create(View view){
         radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
 
-        if(mail.getText().toString().equals("") && password.getText().toString().equals("")){
-            Toast.makeText(this, "Provide email & password", Toast.LENGTH_SHORT).show();
-        }else {
-
-            String eeemail = mail.getText().toString();
-            String passssword = password.getText().toString();
-
-            if(radioButton == null){
-
-                Toast.makeText(this, "Couldn't create account", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "Select User/Stakeholder", Toast.LENGTH_SHORT).show();
+        MakePayment.accounts.add(mail.getText().toString());
+        MakePayment.balance.add(0.00);
+        MakePayment.password.add(password.getText().toString());
+        MakePayment.accountnames.add(userName.getText().toString());
+        MakePayment.bottlesScanned.add(0);
+        Intent int11=new Intent(CreateAccount.this,MainActivity.class);
+        startActivity(int11);
 
 
-            }else if (radioButton.getText().toString().equals("User")){
-
-                authUser.createUserWithEmailAndPassword(eeemail,passssword)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(CreateAccount.this, "User Sign-up Complete", Toast.LENGTH_SHORT).show();
-                                    finish();
-
-                                    Intent int1=new Intent(CreateAccount.this,MainActivity.class);
-                                    startActivity(int1);
-                                }else {
-                                    Toast.makeText(CreateAccount.this, "User Couldn't Sign-up", Toast.LENGTH_SHORT).show();
-                                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-            }else if(radioButton.getText().equals("Stakeholder")) {
-
-                authUser.createUserWithEmailAndPassword(eeemail,passssword)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(CreateAccount.this, "Stakeholder Sign-up Complete", Toast.LENGTH_SHORT).show();
-                                    finish();
-
-                                    Intent int1=new Intent(CreateAccount.this,MainActivity.class);
-                                    startActivity(int1);
-                                }else {
-                                    Toast.makeText(CreateAccount.this, "Stakeholder Couldn't Sign-up", Toast.LENGTH_SHORT).show();
-                                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-
-
-            }
-
-        }
-
+//        if(mail.getText().toString().equals("") && password.getText().toString().equals("")){
+//            Toast.makeText(this, "Provide email & password", Toast.LENGTH_SHORT).show();
+//        }else {
+//
+//            String eeemail = mail.getText().toString();
+//            String passssword = password.getText().toString();
+//
+//            if(radioButton == null){
+//
+//                Toast.makeText(this, "Couldn't create account", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Select User/Stakeholder", Toast.LENGTH_SHORT).show();
+//
+//
+//            }else if (radioButton.getText().toString().equals("User")){
+//
+//                authUser.createUserWithEmailAndPassword(eeemail,passssword)
+//                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                if(task.isSuccessful()){
+//                                    Toast.makeText(CreateAccount.this, "User Sign-up Complete", Toast.LENGTH_SHORT).show();
+//                                    finish();
+//
+//                                    Intent int1=new Intent(CreateAccount.this,MainActivity.class);
+//                                    startActivity(int1);
+//                                }else {
+//                                    Toast.makeText(CreateAccount.this, "User Couldn't Sign-up", Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+//                                }
+//                            }
+//                        });
+//            }else if(radioButton.getText().equals("Stakeholder")) {
+//
+//                authUser.createUserWithEmailAndPassword(eeemail,passssword)
+//                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                if(task.isSuccessful()){
+//                                    Toast.makeText(CreateAccount.this, "Stakeholder Sign-up Complete", Toast.LENGTH_SHORT).show();
+//                                    finish();
+//
+//                                    Intent int1=new Intent(CreateAccount.this,MainActivity.class);
+//                                    startActivity(int1);
+//                                }else {
+//                                    Toast.makeText(CreateAccount.this, "Stakeholder Couldn't Sign-up", Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+//                                }
+//                            }
+//                        });
+//
+//
+//            }
+//
+//        }
+//
     }
 
     public void login(View view) {
