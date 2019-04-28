@@ -12,47 +12,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bigb" />
 
-    <LinearLayout
-        android:layout_width="297dp"
-        android:layout_height="153dp"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="#2EBBCE"
-            android:gravity="center"
-            android:text="BUY AN ITEM" />
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="#2EBBCE"
-            android:clickable="true"
-            android:text="CHECK ACCOUNT" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:text="PASSWORD" />
-    </LinearLayout>
-
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
@@ -60,6 +19,64 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Big Ben" />
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="319dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Item"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Number"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/Price"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:text="Buy Item" />
+    </LinearLayout>
 
 
 </FrameLayout>
