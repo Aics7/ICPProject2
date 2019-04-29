@@ -93,6 +93,12 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 startActivity(int4);
 
                 return true;
+            case R.id.outAshesi:
+                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent int5 = new Intent(MainActivity.this, OutsideAshesi.class);
+                startActivity(int5);
+
+                return true;
             default:
                 return false;
         }

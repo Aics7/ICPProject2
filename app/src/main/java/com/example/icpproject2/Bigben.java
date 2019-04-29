@@ -43,7 +43,7 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
             if(index>=0 &&password.equals(MakePayment.password.get(index))){
                 double newBalance=0;
                 if(MakePayment.balance.get(index)>amount){
-                    newBalance=MakePayment.balance.get(index);
+                    newBalance=MakePayment.balance.get(index)-amount;
                     MakePayment.balance.set(index,newBalance);
                     Toast.makeText(getApplicationContext(), "Purchase successful", Toast.LENGTH_LONG).show();
                     String message=selectedAccount+" has purchase "+ number + " "+item+"(s)"+ " for GHc "+amount;
