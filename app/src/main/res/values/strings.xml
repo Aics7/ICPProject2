@@ -16,9 +16,9 @@
     <string name="get_all_accounts_balances">\t Get all accounts balances\t</string>
     <string name="todo">TODO</string>
     <string name="zoomlion">ZoomLion</string>
-    <string name="essentials">Essentials</string>
-    <string name="bigben">Big Ben</string>
-    <string name="akorno">Akorno</string>
+    <string name="essentials">Purchase Item From Essentials</string>
+    <string name="bigben">Purchase Item From Big Ben</string>
+    <string name="akorno">Purchase Item From Akorno</string>
     <string name="stakeholders">Stakeholders</string>
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
     <string name="Log_out">Log out</string>

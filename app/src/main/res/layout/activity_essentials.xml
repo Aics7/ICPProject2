@@ -12,27 +12,35 @@
         android:scaleType="centerCrop"
         android:src="@drawable/essent" />
 
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/essentials" />
 
     <LinearLayout
         android:layout_width="297dp"
-        android:layout_height="222dp"
+        android:layout_height="420dp"
         android:layout_gravity="center"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="50dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/essentials"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editText8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Item"
-            android:inputType="textPersonName" />
+            android:hint="Item name"
+            android:inputType="textPersonName"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +54,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Number"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editText11"
@@ -55,13 +64,17 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/Price"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:spinnerMode="dialog" />
 
         <EditText
             android:id="@+id/editText15"
@@ -69,22 +82,18 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/mybutton"
+            android:onClick="purchaseE"
             android:text="Buy Item" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editText14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
 
 
 </FrameLayout>

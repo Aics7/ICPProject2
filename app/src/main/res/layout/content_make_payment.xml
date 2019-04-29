@@ -37,7 +37,7 @@
         <Spinner
 
             android:id="@+id/acc"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"
@@ -50,10 +50,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
         <Spinner
 
             android:id="@+id/binplace"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"

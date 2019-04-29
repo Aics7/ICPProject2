@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Essentials extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
 
@@ -16,9 +18,40 @@ public class Essentials extends AppCompatActivity implements AdapterView.OnItemS
         Spinner createdAccounts = (Spinner) findViewById(R.id.spinner);
         createdAccounts.setOnItemSelectedListener(this);
 
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MakePayment.accounts);
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MakePayment.accountnames);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         createdAccounts.setAdapter(aa);
+    }
+
+    public void purchaseE(View view){
+        String item = ((EditText) findViewById(R.id.editText8)).getText().toString();
+        int number = Integer.parseInt(((EditText) findViewById(R.id.editText12)).getText().toString());
+        double price = Double.parseDouble(((EditText) findViewById(R.id.editText11)).getText().toString());
+        Spinner account=(Spinner) findViewById(R.id.spinner);
+        String selectedAccount=String.valueOf(account.getSelectedItem());
+        String password = ((EditText) findViewById(R.id.editText15)).getText().toString();
+        double amount=number*price;
+
+        if(item!=null && number>0&&price>0&&selectedAccount!=null){
+            int index=MakePayment.accountnames.indexOf(selectedAccount);
+            if(password.equals(MakePayment.password.get(index))){
+                double newBalance=0;
+                if(MakePayment.balance.get(index)>amount){
+                    newBalance=MakePayment.balance.get(index);
+                    MakePayment.balance.set(index,newBalance);
+                    Toast.makeText(getApplicationContext(), "Purchase successful", Toast.LENGTH_LONG).show();
+                    String message=selectedAccount+" has purchase "+ number + " "+item+"(s)"+ " for GHc "+amount;
+                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Not enough balance", Toast.LENGTH_LONG).show();
+                }
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Incorrect password", Toast.LENGTH_LONG).show();
+            }
+        }
+        Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
     }
 
     @Override
