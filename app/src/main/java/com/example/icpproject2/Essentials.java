@@ -25,8 +25,16 @@ public class Essentials extends AppCompatActivity implements AdapterView.OnItemS
 
     public void purchaseE(View view){
         String item = ((EditText) findViewById(R.id.editText8)).getText().toString();
-        int number = Integer.parseInt(((EditText) findViewById(R.id.editText12)).getText().toString());
-        double price = Double.parseDouble(((EditText) findViewById(R.id.editText11)).getText().toString());
+        int number = 0;
+        if(((EditText) findViewById(R.id.editText12)).getText().toString().length()>0){
+            number=Integer.parseInt(((EditText) findViewById(R.id.editText12)).getText().toString());
+        }
+
+        double price = 0;
+        if(((EditText) findViewById(R.id.editText11)).getText().toString().length()>0){
+            price=Double.parseDouble(((EditText) findViewById(R.id.editText11)).getText().toString());
+        }
+
         Spinner account=(Spinner) findViewById(R.id.spinner);
         String selectedAccount=String.valueOf(account.getSelectedItem());
         String password = ((EditText) findViewById(R.id.editText15)).getText().toString();
@@ -34,7 +42,7 @@ public class Essentials extends AppCompatActivity implements AdapterView.OnItemS
 
         if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
             int index=MakePayment.accountnames.indexOf(selectedAccount);
-            if(password.equals(MakePayment.password.get(index))){
+            if(index>=0 &&password.equals(MakePayment.password.get(index))){
                 double newBalance=0;
                 if(MakePayment.balance.get(index)>amount){
                     newBalance=MakePayment.balance.get(index);

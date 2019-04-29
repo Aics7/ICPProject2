@@ -40,7 +40,7 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
 
         if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
             int index=MakePayment.accountnames.indexOf(selectedAccount);
-            if(password.equals(MakePayment.password.get(index))){
+            if(index>=0 &&password.equals(MakePayment.password.get(index))){
                 double newBalance=0;
                 if(MakePayment.balance.get(index)>amount){
                     newBalance=MakePayment.balance.get(index);

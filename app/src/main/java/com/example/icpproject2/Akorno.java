@@ -26,8 +26,15 @@ public class Akorno extends AppCompatActivity implements AdapterView.OnItemSelec
 
     public void purchaseA(View view){
         String item = ((EditText) findViewById(R.id.editText19)).getText().toString();
-        int number = Integer.parseInt(((EditText) findViewById(R.id.editText20)).getText().toString());
-        double price = Double.parseDouble(((EditText) findViewById(R.id.editText21)).getText().toString());
+        int number =0;
+        if(((EditText) findViewById(R.id.editText20)).getText().toString().length()>0){
+            number=Integer.parseInt(((EditText) findViewById(R.id.editText20)).getText().toString());
+        }
+
+        double price =0.0;
+        if(((EditText) findViewById(R.id.editText21)).getText().toString().length()>0){
+            price=Double.parseDouble(((EditText) findViewById(R.id.editText21)).getText().toString());
+        }
         Spinner account=(Spinner) findViewById(R.id.spinner7);
         String selectedAccount=String.valueOf(account.getSelectedItem());
         String password = ((EditText) findViewById(R.id.editText22)).getText().toString();
@@ -35,7 +42,7 @@ public class Akorno extends AppCompatActivity implements AdapterView.OnItemSelec
 
         if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
             int index=MakePayment.accountnames.indexOf(selectedAccount);
-            if(password.equals(MakePayment.password.get(index))){
+            if(index>=0 &&password.equals(MakePayment.password.get(index))){
                 double newBalance=0;
                 if(MakePayment.balance.get(index)>amount){
                     newBalance=MakePayment.balance.get(index);
