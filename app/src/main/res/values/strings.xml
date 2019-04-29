@@ -27,4 +27,6 @@
     <string name="Price">Price</string>
     <string name="show_data_for_users">Show Data for Users</string>
     <string name="textview">TextView</string>
+    <string name="the_the_guardian_of_our_future_award_goes_to">The “The Guardian of our Future” award goes to:</string>
+    <string name="winner">Winner</string>
 </resources>
