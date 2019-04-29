@@ -20,21 +20,20 @@
         android:gravity="center"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:ems="10"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="50dp"
+            android:layout_weight="10"
+            android:ems="10"
             android:gravity="center"
             android:text="The “The Guardian of our Future” award goes to:  "
             android:textAllCaps="false"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="30sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/guardName"
@@ -44,12 +43,19 @@
             android:ems="10"
             android:gravity="center"
             android:text="Winner"
-            android:textAllCaps="false"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textAllCaps="true"
+            android:textColor="#002F77"
             android:textSize="30sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
-
+        <ImageView
+            android:id="@+id/imagee"
+            android:layout_width="308dp"
+            android:layout_height="186dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/congrats" />
 
     </LinearLayout>
 </FrameLayout>
