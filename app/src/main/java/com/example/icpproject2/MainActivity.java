@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         startActivity(int1);
     }
 
+    public void logOut(View view){
+        Intent int1=new Intent(MainActivity.this,CreateAccount.class);
+        startActivity(int1);
+    }
+
     @Override
     public boolean onMenuItemClick(MenuItem item) {
 
