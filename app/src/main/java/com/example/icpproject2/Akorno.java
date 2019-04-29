@@ -52,7 +52,10 @@ public class Akorno extends AppCompatActivity implements AdapterView.OnItemSelec
                 Toast.makeText(getApplicationContext(), "Incorrect password", Toast.LENGTH_LONG).show();
             }
         }
-        Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
+        else{
+            Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     @Override

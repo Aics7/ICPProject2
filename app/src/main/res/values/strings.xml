@@ -16,9 +16,12 @@
     <string name="get_all_accounts_balances">\t Get all accounts balances\t</string>
     <string name="todo">TODO</string>
     <string name="zoomlion">ZoomLion</string>
-    <string name="essentials">Purchase Item From Essentials</string>
-    <string name="bigben">Purchase Item From Big Ben</string>
-    <string name="akorno">Purchase Item From Akorno</string>
+    <string name="essentials">Essentials</string>
+    <string name="bigben">Big Ben</string>
+    <string name="akorno">Akorno</string>
+    <string name="essentialsInt">Purchase Item From Essentials</string>
+    <string name="bigbenInt">Purchase Item From Big Ben</string>
+    <string name="akornoInt">Purchase Item From Akorno</string>
     <string name="stakeholders">Stakeholders</string>
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
     <string name="Log_out">Log out</string>
@@ -26,10 +29,8 @@
     <string name="user_name">User name</string>
     <string name="Price">Price</string>
     <string name="show_data_for_users">Show Data for Users</string>
-    <!--<string name="textview">TextView</string>-->
     <string name="the_the_guardian_of_our_future_award_goes_to">The “The Guardian of our Future” award goes to:</string>
     <string name="winner">Winner</string>
-    <string name="sjsaiojoijsojo_nswon_nonos">sjsaiojoijsojo nswon nonos</string>
     <string name="get_guardian">Get Guardian</string>
     <string name="textview">TextView</string>
 </resources>

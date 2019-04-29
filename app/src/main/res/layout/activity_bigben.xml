@@ -27,14 +27,14 @@
             android:layout_marginBottom="50dp"
             android:ems="10"
             android:gravity="center"
-            android:text="@string/bigben"
+            android:text="@string/bigbenInt"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="24sp"
             android:textStyle="bold" />
 
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editText30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,7 +48,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/editText31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,7 +58,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/editText32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -69,7 +69,7 @@
         </LinearLayout>
 
         <Spinner
-            android:id="@+id/spinner4"
+            android:id="@+id/spinner30"
             android:layout_width="match_parent"
             android:layout_height="29dp"
             android:layout_marginTop="24dp"
@@ -78,7 +78,7 @@
             android:spinnerMode="dialog" />
 
         <EditText
-            android:id="@+id/editText13"
+            android:id="@+id/editText33"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -87,11 +87,11 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/button170"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/mybutton"
-            android:onClick="purchaseB"
+            android:onClick="purchaseBB"
             android:text="Buy Item" />
     </LinearLayout>
 

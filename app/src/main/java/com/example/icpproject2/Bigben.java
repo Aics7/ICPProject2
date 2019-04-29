@@ -15,7 +15,7 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bigben);
-        Spinner createdAccounts = (Spinner) findViewById(R.id.spinner4);
+        Spinner createdAccounts = (Spinner) findViewById(R.id.spinner30);
         createdAccounts.setOnItemSelectedListener(this);
 
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MakePayment.accounts);
@@ -23,13 +23,13 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
         createdAccounts.setAdapter(aa);
     }
 
-    public void purchaseB(View view){
-        String item = ((EditText) findViewById(R.id.editText)).getText().toString();
-        int number = Integer.parseInt(((EditText) findViewById(R.id.editText9)).getText().toString());
-        double price = Double.parseDouble(((EditText) findViewById(R.id.editText10)).getText().toString());
-        Spinner account=(Spinner) findViewById(R.id.spinner4);
+    public void purchaseBB(View view){
+        String item = ((EditText) findViewById(R.id.editText30)).getText().toString();
+        int number = Integer.parseInt(((EditText) findViewById(R.id.editText31)).getText().toString());
+        double price = Double.parseDouble(((EditText) findViewById(R.id.editText32)).getText().toString());
+        Spinner account=(Spinner) findViewById(R.id.spinner30);
         String selectedAccount=String.valueOf(account.getSelectedItem());
-        String password = ((EditText) findViewById(R.id.editText13)).getText().toString();
+        String password = ((EditText) findViewById(R.id.editText33)).getText().toString();
         double amount=number*price;
 
         if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
@@ -50,8 +50,10 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
             else{
                 Toast.makeText(getApplicationContext(), "Incorrect password", Toast.LENGTH_LONG).show();
             }
+        }else{
+            Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
         }
-        Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
+
     }
 
     @Override

@@ -51,7 +51,10 @@ public class Essentials extends AppCompatActivity implements AdapterView.OnItemS
                 Toast.makeText(getApplicationContext(), "Incorrect password", Toast.LENGTH_LONG).show();
             }
         }
-        Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
+        else{
+            Toast.makeText(getApplicationContext(), "Purchase unsuccessful", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     @Override
