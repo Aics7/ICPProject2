@@ -6,6 +6,10 @@ import android.widget.TextView;
 
 public class Zoomlion extends AppCompatActivity {
 
+    static {
+        System.loadLibrary("native-lib");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,4 +41,7 @@ public class Zoomlion extends AppCompatActivity {
             newTextView2.setText(""+MakePayment.EssentialsBinNum);
         }
     }
+    public native String getAkornoBin();
+    public native String getBigbenBin();
+    public native String getEssentialsBin();
 }

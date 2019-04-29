@@ -33,6 +33,15 @@ public class Stakeholder extends AppCompatActivity {
 
     }
 
+    public void zoomlion(View view){
+        Intent intt=new Intent(Stakeholder.this,Zoomlion.class);
+        startActivity(intt);
+    }
+    public void getGuardian(View view){
+        Intent int1=new Intent(Stakeholder.this,LeaderBoad.class);
+        startActivity(int1);
+    }
+
     public void showUserData(View view){
         Intent int1=new Intent(Stakeholder.this,AccountsData.class);
         startActivity(int1);

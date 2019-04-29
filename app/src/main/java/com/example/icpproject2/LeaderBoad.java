@@ -13,11 +13,16 @@ public class LeaderBoad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leader_boad);
 
-        int highest=Collections.max(MakePayment.bottlesScanned);
-        String guardian=MakePayment.accountnames.get(highest);
 
-        TextView newTextView=(TextView) findViewById(R.id.guardName);
-        newTextView.setText(guardian);
-
+        if (MakePayment.bottlesScanned.size() > 0) {
+            int highest=Collections.max(MakePayment.bottlesScanned);
+            String guardian=MakePayment.accountnames.get(highest);
+            TextView newTextView=(TextView) findViewById(R.id.guardName);
+            newTextView.setText(guardian);
+        }
+        else{
+            TextView newTextView=(TextView) findViewById(R.id.guardName);
+            newTextView.setText("No Users available");
+        }
     }
 }

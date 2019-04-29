@@ -32,7 +32,7 @@ public class Essentials extends AppCompatActivity implements AdapterView.OnItemS
         String password = ((EditText) findViewById(R.id.editText15)).getText().toString();
         double amount=number*price;
 
-        if(item!=null && number>0&&price>0&&selectedAccount!=null){
+        if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
             int index=MakePayment.accountnames.indexOf(selectedAccount);
             if(password.equals(MakePayment.password.get(index))){
                 double newBalance=0;

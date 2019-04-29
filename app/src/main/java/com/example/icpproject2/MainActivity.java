@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        usersName = (TextView) findViewById(R.id.viewUserName);
+        usersName = (TextView) findViewById(R.id.textView7);
         usersName.setText(MakePayment.accountnames.get(MakePayment.accountnames.size()-1));
 
         Button btn = (Button) findViewById(R.id.btnShow);

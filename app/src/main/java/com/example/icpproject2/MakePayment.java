@@ -65,13 +65,27 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
             paid=true;
             Scanner.barCodes.add(Scanner.tempBarcodes.pop());
 
-            if (selectedBin.equalsIgnoreCase("Akorno")){
+            if (selectedBin.equalsIgnoreCase("Akorno")&&akornoBinNum>=5){
+                Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
                 akornoBinNum++;
             }
-            if (selectedBin.equalsIgnoreCase("BigBen")){
+            else if (selectedBin.equalsIgnoreCase("Akorno")&&akornoBinNum<5){
+                akornoBinNum++;
+            }
+
+            if (selectedBin.equalsIgnoreCase("BigBen")&&BigBenBinNum>=5){
+                Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
+                akornoBinNum++;
+            }
+            else if (selectedBin.equalsIgnoreCase("BigBen")){
                 BigBenBinNum++;
             }
-            if (selectedBin.equalsIgnoreCase("Essentials")){
+
+            if (selectedBin.equalsIgnoreCase("Essentials")&&EssentialsBinNum>=5){
+                Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
+                akornoBinNum++;
+            }
+            else if (selectedBin.equalsIgnoreCase("Essentials")){
                 EssentialsBinNum++;
             }
 

@@ -15,7 +15,7 @@ public class Akorno extends AppCompatActivity implements AdapterView.OnItemSelec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_akorno);
-        Spinner createdAccounts = (Spinner) findViewById(R.id.spinner4);
+        Spinner createdAccounts = (Spinner) findViewById(R.id.spinner7);
         createdAccounts.setOnItemSelectedListener(this);
 
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,MakePayment.accounts);
@@ -33,7 +33,7 @@ public class Akorno extends AppCompatActivity implements AdapterView.OnItemSelec
         String password = ((EditText) findViewById(R.id.editText22)).getText().toString();
         double amount=number*price;
 
-        if(item!=null && number>0&&price>0&&selectedAccount!=null){
+        if(item.length()>0 && number>0&&price>0&&selectedAccount.length()>0){
             int index=MakePayment.accountnames.indexOf(selectedAccount);
             if(password.equals(MakePayment.password.get(index))){
                 double newBalance=0;

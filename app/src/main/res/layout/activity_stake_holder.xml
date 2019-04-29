@@ -50,6 +50,30 @@
             android:onClick="showUserData"
             android:text="@string/show_data_for_users"
             android:textColor="#FAF7F7" />
+        <Button
+            android:id="@+id/zoom"
+            android:layout_width="204dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/mybutton"
+            android:onClick="zoomlion"
+            android:text="Zoomlion Bin Status"
+            android:textColor="#FAF7F7" />
+        <Button
+            android:id="@+id/guardian"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/mybutton"
+            android:onClick="getGuardian"
+            android:text="@string/get_guardian"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/viewUsersData3"
