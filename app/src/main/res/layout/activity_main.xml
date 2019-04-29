@@ -12,6 +12,16 @@
         android:scaleType="centerCrop"
         android:contentDescription="@string/todo" />
 
+    <TextView
+        android:id="@+id/viewUserName"
+        android:layout_width="238dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
+        android:text="sjsaiojoijsojo  nswon nonos"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:id="@+id/buttonsContainer"
         android:layout_width="wrap_content"
@@ -69,6 +79,7 @@
             android:onClick="getGuardian"
             android:text="Get Guardian"
             android:textColor="@android:color/background_light" />
+
         <Button
             android:id="@+id/button4"
             android:layout_width="149dp"
@@ -76,7 +87,7 @@
             android:layout_marginTop="34dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/mybutton"
-            android:onClick="createAccount"
+            android:onClick="logOut"
             android:text="@string/Log_out"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"

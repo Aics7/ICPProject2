@@ -8,9 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
+
+
+    TextView usersName;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -21,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        usersName = (TextView) findViewById(R.id.viewUserName);
+        usersName.setText(MakePayment.accountnames.get(MakePayment.accountnames.size()-1));
 
         Button btn = (Button) findViewById(R.id.btnShow);
         btn.setOnClickListener(new View.OnClickListener() {
