@@ -54,7 +54,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Number"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textStyle="bold" />
 
             <EditText

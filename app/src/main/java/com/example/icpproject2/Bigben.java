@@ -29,7 +29,10 @@ public class Bigben extends AppCompatActivity implements AdapterView.OnItemSelec
         if(((EditText) findViewById(R.id.editText31)).getText().toString().length()>0){
             number = Integer.parseInt(((EditText) findViewById(R.id.editText31)).getText().toString());
         }
-        double price = Double.parseDouble(((EditText) findViewById(R.id.editText32)).getText().toString());
+        double price=0.0;
+        if(((EditText) findViewById(R.id.editText32)).getText().toString().length()>0){
+            price = Double.parseDouble(((EditText) findViewById(R.id.editText32)).getText().toString());
+        }
         Spinner account=(Spinner) findViewById(R.id.spinner30);
         String selectedAccount=String.valueOf(account.getSelectedItem());
         String password = ((EditText) findViewById(R.id.editText33)).getText().toString();
