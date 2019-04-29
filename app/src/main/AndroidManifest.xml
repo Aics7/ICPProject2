@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LeaderBoad"></activity>
         <activity android:name=".Akorno" />
+        <activity android:name=".Stakeholder" />
         <activity android:name=".Bigben" />
         <activity android:name=".Essentials" />
         <activity android:name=".Zoomlion" />

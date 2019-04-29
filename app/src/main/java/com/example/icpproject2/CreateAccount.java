@@ -54,7 +54,7 @@ public class CreateAccount extends AppCompatActivity {
                 Toast.makeText(this, "Select User/Stakeholder", Toast.LENGTH_SHORT).show();
 
 
-            }else if (radioButton.getText().toString().equals("User")){
+            }else if (radioButton.getText().toString().equals("I am a User")){
 
                 authUser.createUserWithEmailAndPassword(eeemail,passssword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -78,7 +78,7 @@ public class CreateAccount extends AppCompatActivity {
                                 }
                             }
                         });
-            }else if(radioButton.getText().equals("Stakeholder")) {
+            }else if(radioButton.getText().equals("I am a Stakeholder")) {
 
                 authUser.createUserWithEmailAndPassword(eeemail,passssword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -88,7 +88,7 @@ public class CreateAccount extends AppCompatActivity {
                                     Toast.makeText(CreateAccount.this, "Stakeholder Sign-up Complete", Toast.LENGTH_SHORT).show();
                                     finish();
 
-                                    Stakeholder.index = Stakeholder.index ++;
+                                    Stakeholder.userName = userName.getText().toString();
                                     Stakeholder.stakeHolderAccounts.add(mail.getText().toString());
                                     Stakeholder.stakeHolderPassword.add(password.getText().toString());
                                     Stakeholder.stakeHolderAccountnames.add(userName.getText().toString());
@@ -125,7 +125,7 @@ public class CreateAccount extends AppCompatActivity {
                 Toast.makeText(this, "Couldn't Log-in", Toast.LENGTH_SHORT).show();
                 Toast.makeText(this, "Select User/Stakeholder", Toast.LENGTH_SHORT).show();
 
-            }else if (radioButton.getText().toString().equals("User")){
+            }else if (radioButton.getText().toString().equals("I am a User")){
 
                 authUser.signInWithEmailAndPassword(eeemial,paaassword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -144,7 +144,7 @@ public class CreateAccount extends AppCompatActivity {
 
                             }
                         });
-            }else if(radioButton.getText().equals("Stakeholder")) {
+            }else if(radioButton.getText().equals("I am a Stakeholder")) {
                 authUser.signInWithEmailAndPassword(eeemial,paaassword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

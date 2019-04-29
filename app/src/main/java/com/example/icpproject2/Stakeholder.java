@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Stakeholder extends AppCompatActivity {
 
-    public  static int index = 0;
+    public  static String userName = "";
 
     public static ArrayList<String> stakeHolderAccounts =new ArrayList<String>();
     public static ArrayList<String> stakeHolderAccountnames =new ArrayList<String>();
@@ -29,12 +29,17 @@ public class Stakeholder extends AppCompatActivity {
 
         stakeHolderName = (TextView) findViewById(R.id.stakeHolderName);
 
-        stakeHolderName.setText(stakeHolderAccountnames.get(index));
+        stakeHolderName.setText(userName);
 
     }
 
     public void showUserData(View view){
         Intent int1=new Intent(Stakeholder.this,AccountsData.class);
+        startActivity(int1);
+    }
+
+    public void logOutStakeholder(View view){
+        Intent int1=new Intent(Stakeholder.this,CreateAccount.class);
         startActivity(int1);
     }
 }
