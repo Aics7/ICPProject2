@@ -37,7 +37,7 @@
         <Spinner
 
             android:id="@+id/acc"
-            android:layout_width="72dp"
+            android:layout_width="match_parent"
             android:layout_height="33dp"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"
@@ -55,7 +55,7 @@
         <Spinner
 
             android:id="@+id/binplace"
-            android:layout_width="71dp"
+            android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_marginStart="100dp"
             android:layout_marginLeft="100dp"
