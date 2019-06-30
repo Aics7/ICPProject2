@@ -49,7 +49,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <Button
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:text="@string/my_account"
+            android:textColor="@android:color/background_light" />
         <Button
             android:id="@+id/btnShow"
             android:layout_width="match_parent"

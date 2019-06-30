@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
 
     TextView usersName;
+    static String userName;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         setContentView(R.layout.activity_main);
 
         usersName = (TextView) findViewById(R.id.textView7);
+        userName=usersName.getText().toString();
         if(MakePayment.accountnames.size()>0){
             usersName.setText(MakePayment.accountnames.get(MakePayment.accountnames.size()-1));
         }
@@ -65,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     public void logOut(View view){
         Intent int1=new Intent(MainActivity.this,CreateAccount.class);
+        startActivity(int1);
+    }
+    public void myAccount(View view){
+        Intent int1=new Intent(MainActivity.this,MyAccount.class);
         startActivity(int1);
     }
 

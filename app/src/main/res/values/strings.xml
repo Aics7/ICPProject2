@@ -33,4 +33,6 @@
     <string name="winner">Winner</string>
     <string name="get_guardian">Get Guardian</string>
     <string name="textview">TextView</string>
+    <string name="my_account">My Account</string>
+    <string name="title_activity_my_account">MyAccount</string>
 </resources>
