@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/zoomlion"
-        android:icon="@drawable/zl"
-        android:title="@string/zoomlion" />
+    <!--<item android:id="@+id/zoomlion"-->
+        <!--android:icon="@drawable/zl"-->
+        <!--android:title="@string/zoomlion" />-->
     <item android:id="@+id/essentials"
         android:icon="@drawable/esse"
         android:title="@string/essentials" />

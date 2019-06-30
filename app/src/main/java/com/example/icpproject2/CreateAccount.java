@@ -47,6 +47,7 @@ public class CreateAccount extends AppCompatActivity {
 
             String eeemail = mail.getText().toString();
             String passssword = password.getText().toString();
+            String name = userName.getText().toString();
 
             if(radioButton == null){
 
@@ -61,7 +62,7 @@ public class CreateAccount extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(CreateAccount.this, "User Sign-up Complete", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(CreateAccount.this, "Collector Sign-up Complete", Toast.LENGTH_SHORT).show();
                                     finish();
 
                                     MakePayment.accounts.add(mail.getText().toString());
@@ -73,19 +74,20 @@ public class CreateAccount extends AppCompatActivity {
                                     startActivity(int11);
 
                                 }else {
-                                    Toast.makeText(CreateAccount.this, "User Couldn't Sign-up", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(CreateAccount.this, "Collector Couldn't Sign-up", Toast.LENGTH_SHORT).show();
                                     Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
             }else if(radioButton.getText().equals("I am a Stakeholder")) {
 
+                /*
                 authUser.createUserWithEmailAndPassword(eeemail,passssword)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(CreateAccount.this, "Stakeholder Sign-up Complete", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(CreateAccount.this, "Zoomlion Sign-up Complete", Toast.LENGTH_SHORT).show();
                                     finish();
 
                                     Stakeholder.userName = userName.getText().toString();
@@ -101,6 +103,42 @@ public class CreateAccount extends AppCompatActivity {
                                 }
                             }
                         });
+
+                        */
+
+                Toast.makeText(CreateAccount.this, "Already Signed up as Zoomlion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateAccount.this, "Logging in ..........", Toast.LENGTH_SHORT).show();
+
+
+                String zoomMial = "zoomlion@zoomlionghana.com";
+
+                String zoomPassword = "zoomlionGhana";
+
+                if ((zoomMial.equals(eeemail)) && (zoomPassword.equals(passssword)) && name.equalsIgnoreCase("zoomlion")) {
+                    authUser.signInWithEmailAndPassword(zoomMial, zoomPassword)
+
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(CreateAccount.this, "Stakeholder Log-in Complete", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        // open new screen here
+                                        Intent int1 = new Intent(CreateAccount.this, Stakeholder.class);
+                                        startActivity(int1);
+                                    } else {
+                                        Toast.makeText(CreateAccount.this, "Stakeholder Couldn't Log-in", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            });
+
+                }else {
+                    Toast.makeText(CreateAccount.this, "Incorrect Email or Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+                }
+
 
 
             }
@@ -119,6 +157,7 @@ public class CreateAccount extends AppCompatActivity {
 
             String eeemial = mail.getText().toString();
             String paaassword = password.getText().toString();
+            String name = userName.getText().toString();
 
 
             if(radioButton == null){
@@ -145,25 +184,36 @@ public class CreateAccount extends AppCompatActivity {
                             }
                         });
             }else if(radioButton.getText().equals("I am a Stakeholder")) {
-                authUser.signInWithEmailAndPassword(eeemial,paaassword)
 
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(CreateAccount.this, "Stakeholder Log-in Complete", Toast.LENGTH_SHORT).show();
-                                    finish();
-                                    // open new screen here
-                                    Intent int1=new Intent(CreateAccount.this,Stakeholder.class);
-                                    startActivity(int1);
-                                }else {
-                                    Toast.makeText(CreateAccount.this, "Stakeholder Couldn't Log-in", Toast.LENGTH_SHORT).show();
-                                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+                String zoomName = "Zoomlion";
+                String zoomMial = "zoomlion@zoomlionghana.com";
+
+                String zoomPassword = "zoomlionGhana";
+
+                if ((zoomMial.equals(eeemial)) && (zoomPassword.equals(paaassword))&& name.equalsIgnoreCase("zoomlion") ) {
+                    authUser.signInWithEmailAndPassword(zoomMial, zoomPassword)
+
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(CreateAccount.this, "Stakeholder Log-in Complete", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        // open new screen here
+                                        Intent int1 = new Intent(CreateAccount.this, Stakeholder.class);
+                                        startActivity(int1);
+                                    } else {
+                                        Toast.makeText(CreateAccount.this, "Stakeholder Couldn't Log-in", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+                                    }
+
                                 }
+                            });
 
-                            }
-                        });
-
+                }else {
+                    Toast.makeText(CreateAccount.this, "Incorrect Email or Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateAccount.this, "Try Again", Toast.LENGTH_SHORT).show();
+                }
 
             }
 

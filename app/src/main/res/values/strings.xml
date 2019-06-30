@@ -4,7 +4,7 @@
     <string name="scan">Scan</string>
     <string name="acc_select">Please select an account to make payment</string>
     <string name="account_inexistent">Account Doesn\'t Exist? \n Tap create Acount to create a new Account</string>
-    <string name="make_payment">\t\t\t\tMake Payment\t\t\t\t</string>
+    <string name="make_payment">\t\t\t\Add Points\t\t\t\t</string>
     <string name="create_account">\t\t\t\t Sign Up \t\t\t\t</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
@@ -22,7 +22,7 @@
     <string name="essentialsInt">Purchase Item From Essentials</string>
     <string name="bigbenInt">Purchase Item From Big Ben</string>
     <string name="akornoInt">Purchase Item From Akorno</string>
-    <string name="stakeholders">Stakeholders</string>
+    <string name="stakeholders">Purchase Item(s)</string>
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
     <string name="Log_out">Log out</string>
     <string name="welcome">Welcome to\nAshesi As a Living Lab</string>

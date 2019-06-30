@@ -27,6 +27,8 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
 
     boolean paid=false;
 
+    private Zoomlion zoom=new Zoomlion();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -68,6 +70,7 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
             if (selectedBin.equalsIgnoreCase("Akorno")&&akornoBinNum>=5){
                 Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
                 akornoBinNum++;
+                zoom.sendEmail(selectedBin);
             }
             else if (selectedBin.equalsIgnoreCase("Akorno")&&akornoBinNum<5){
                 akornoBinNum++;
@@ -76,6 +79,7 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
             if (selectedBin.equalsIgnoreCase("BigBen")&&BigBenBinNum>=5){
                 Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
                 akornoBinNum++;
+                zoom.sendEmail(selectedBin);
             }
             else if (selectedBin.equalsIgnoreCase("BigBen")){
                 BigBenBinNum++;
@@ -84,6 +88,7 @@ public class MakePayment extends AppCompatActivity implements AdapterView.OnItem
             if (selectedBin.equalsIgnoreCase("Essentials")&&EssentialsBinNum>=5){
                 Toast.makeText(getApplicationContext(), "bin full, contact Zoomlion for pickup", Toast.LENGTH_LONG).show();
                 akornoBinNum++;
+                zoom.sendEmail(selectedBin);
             }
             else if (selectedBin.equalsIgnoreCase("Essentials")){
                 EssentialsBinNum++;
