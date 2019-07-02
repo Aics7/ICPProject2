@@ -8,7 +8,7 @@
     <string name="create_account">\t\t\t\t Sign Up \t\t\t\t</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="fill_form">\t Keep Ashesi clean \t</string>
+    <string name="fill_form">\t Keep Ghana clean \t</string>
     <string name="type_your_password_here"> Password </string>
     <string name="type_your_email_here">Email</string>
     <string name="balance_title">Kindly find the balances of all accounts below</string>
@@ -25,7 +25,7 @@
     <string name="stakeholders">Purchase Item(s)</string>
     <string name="login">\t\t\t\t Sign In \t\t\t\t</string>
     <string name="Log_out">Log out</string>
-    <string name="welcome">Welcome to\nAshesi As a Living Lab</string>
+    <string name="welcome">RePsyche</string>
     <string name="user_name">User name</string>
     <string name="Price">Price</string>
     <string name="show_data_for_users">Show Data for Users</string>
