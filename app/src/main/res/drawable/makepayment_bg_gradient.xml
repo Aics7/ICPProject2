@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <bitmap
-            android:src="@drawable/payment"
-            android:gravity="left|center_vertical" />
+        <!--<bitmap
+            &lt;!&ndash;android:src="@drawable/payment"&ndash;&gt;
+            android:gravity="left|center_vertical" />-->
     </item>
 
     <item>
