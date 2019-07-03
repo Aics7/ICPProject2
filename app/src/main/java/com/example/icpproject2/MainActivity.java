@@ -78,12 +78,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     public boolean onMenuItemClick(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.zoomlion:
-                Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                Intent int1 = new Intent(MainActivity.this, Zoomlion.class);
-                startActivity(int1);
-                return true;
-            case R.id.essentials:
+                case R.id.essentials:
                 Toast.makeText(this, "Selected Stakeholder: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent int2 = new Intent(MainActivity.this, Essentials.class);
                 startActivity(int2);
@@ -111,9 +106,5 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     }
 
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+
 }

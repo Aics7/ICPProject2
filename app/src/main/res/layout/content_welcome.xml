@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c916a0fa"
+    tools:context=".Welcome">
+
+
+    <LinearLayout
+        android:id="@+id/WelcomeButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/mybackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcomeNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Welcome To Repsyche Recycling Project"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:fontFamily="cursive"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userOrStakeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Are you a collector or a stakeholder (Zoomlion) ?"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/collector">
+
+
+            <Button
+                android:id="@+id/collector"
+                android:layout_width="170dip"
+                android:layout_height="170dip"
+                android:layout_marginTop="12dip"
+                android:layout_marginBottom="12dip"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/mybutton"
+                android:onClick="Collector"
+                android:text="Collector"
+                android:layout_marginRight="12dip"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/stakeholder"
+                android:layout_width="170dip"
+                android:layout_height="170dip"
+                android:layout_marginTop="12dip"
+                android:layout_marginBottom="12dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/mybutton"
+                android:onClick="Stakeholder"
+                android:text="Stakeholder"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/collector">
+
+
+            <Button
+                android:id="@+id/Guest"
+                android:layout_width="170dip"
+                android:layout_height="170dip"
+                android:layout_marginTop="12dip"
+                android:layout_marginBottom="12dip"
+                android:background="@drawable/mybutton"
+                android:onClick="Guest"
+                android:text="Guest"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -3,14 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#c916a0fa"
     tools:context=".MyAccount">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/zooml"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/todo" />
 
     <LinearLayout
         android:id="@+id/buttonsContainer"
@@ -18,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:background="@drawable/mybackground"
         android:orientation="vertical">
 
         <TextView
@@ -32,7 +28,9 @@
             android:textAllCaps="true"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
 
         <!--<ImageView-->
             <!--android:layout_marginTop="20dp"-->
@@ -132,7 +130,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="62dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp">
 
             <TextView
                 android:id="@+id/balance"

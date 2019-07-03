@@ -16,9 +16,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Welcome"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignIn"
+            android:label="@string/title_activity_sign_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MyAccount"
             android:label="@string/title_activity_my_account"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OutsideAshesi" />
         <activity android:name=".LeaderBoad" />
         <activity android:name=".Akorno" />
@@ -33,13 +51,7 @@
             android:label="@string/title_activity_make_payment"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Scanner" />
-        <activity android:name=".CreateAccount">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".CreateAccount" />
     </application>
 
 </manifest>
